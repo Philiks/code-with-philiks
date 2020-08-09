@@ -4,7 +4,6 @@ import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
@@ -13,12 +12,13 @@ import javax.swing.Timer;
 public class BouncingBall extends JPanel {
 	private static final long serialVersionUID = 1L;
 	
+	private Random rand = new Random();
 	private final int WIDTH  	= 1000,
 					  HEIGHT 	= WIDTH * 9 / 16,
 					  DIAMETER 	= 100;
 	
-	private int myX = WIDTH  / 2 - DIAMETER / 2, // CENTER X 
-				myY = HEIGHT / 2 - DIAMETER / 2, // CENTER Y
+	private int myX = rand.nextInt(WIDTH - DIAMETER), 
+				myY = rand.nextInt(HEIGHT - DIAMETER),
 				xDir = 1, yDir = 1; 
 	
 	private Color myColor = Color.WHITE;
@@ -68,7 +68,6 @@ public class BouncingBall extends JPanel {
 	}
 	
 	private void changeColor() {
-		Random rand = new Random();
 		myColor = new Color(rand.nextInt(255), // RED 
 							rand.nextInt(255), // GREEN
 							rand.nextInt(255));// BLUE

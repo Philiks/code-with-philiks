@@ -30,7 +30,7 @@ public class BouncingBallFinal extends JPanel {
 	private Color myColor = Color.WHITE;
 	
 	private BouncingBallFinal() {
-		JFrame frame = new JFrame("Bouncing Ball");
+		JFrame frame = new JFrame("Bouncing Ball Final");
 		
 		setPreferredSize(new Dimension(WIDTH, HEIGHT));
 		setBackground(Color.BLACK);

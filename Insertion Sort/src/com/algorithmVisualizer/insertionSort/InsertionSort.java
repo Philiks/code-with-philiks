@@ -1,4 +1,4 @@
-package com.algoithmVisualizer.insertionSort;
+package com.algorithmVisualizer.insertionSort;
 
 import java.awt.Color;
 import java.awt.Dimension;
